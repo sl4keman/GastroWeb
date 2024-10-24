@@ -6,251 +6,80 @@ body {
     height: 100vh;
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background-color: #FDF3E7; /* Color suave de fondo */
-    color: #4E342E; /* Color del texto principal */
+    background-color: #f7f7f7; /* Color suave de fondo */
+    color: #333; /* Color del texto principal */
     padding: 0;
 }
 
-/* Encabezados principales con mejor visibilidad */
-h1, h2 {
-    color: #D84315; /* Color del encabezado */
-    text-align: center; /* Centrar texto */
-    margin-bottom: 20px; /* Espaciado inferior */
-}
-
-/* Botones generales con efectos de hover y más espaciamiento */
-button {
-    background-color: #FF7043; /* Color base del botón */
-    border: none;
-    color: white;
-    padding: 12px 25px; /* Espaciado interno mejorado */
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 18px; /* Aumentar el tamaño de fuente */
-    margin: 6px 2px; /* Espaciado entre botones */
-    cursor: pointer;
-    border-radius: 8px; /* Bordes más redondeados */
-    transition: background-color 0.3s, transform 0.2s; /* Efecto de transición */
-}
-
-button:hover {
-    background-color: #F4511E; /* Color de fondo al pasar el mouse */
-    transform: scale(1.05); /* Efecto de escala al pasar el mouse */
-}
-
-/* Contenedor de login y registro más acogedor */
-.login-container, .register-container {
-    width: 300px;
-    margin: auto;
+/* Contenedor de login más acogedor */
+.login-container {
+    width: 350px;
     padding: 30px; /* Mayor padding para mejor visualización */
-    border: 2px solid #D84315; /* Borde más visible */
-    border-radius: 15px; /* Bordes redondeados más suaves */
-    background-color: #FFFFFF; 
+    border: 1px solid #ccc; /* Borde más suave */
+    border-radius: 10px; /* Bordes redondeados más suaves */
+    background-color: #ffffff; 
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
 }
 
+/* Encabezados principales con mejor visibilidad */
+h2 {
+    color: #4E342E; /* Color del encabezado */
+    text-align: center; /* Centrar texto */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+h1 {
+     
+    text-align: center; /* Centrar texto */
+    
+}
+
+
 /* Etiquetas de formularios mejor organizadas */
 label {
-    color: #4E342E;
+    color: #555;
     display: block;
     margin-bottom: 8px; /* Espaciado inferior */
     font-weight: bold; /* Texto en negrita */
 }
 
 /* Estilo de los campos de entrada */
-input[type="email"], input[type="password"], input[type="text"], input[type="date"] {
+input[type="email"], input[type="password"] {
     width: 100%;
-    padding: 12px; /* Mayor padding para comodidad */
+    padding: 10px; /* Mayor padding para comodidad */
     margin-bottom: 15px;
-    border: 2px solid #D84315; /* Borde más visible */
+    border: 1px solid #ccc; /* Borde más suave */
     border-radius: 5px;
     box-sizing: border-box; /* Asegurar que el padding no afecte el ancho */
 }
 
-/* Estilo de menú principal */
-.menu-principal {
+/* Botones generales con efectos de hover y más espaciamiento */
+.button, .register-button {
+    background-color: #333; /* Color base del botón */
+    border: none;
+    color: white;
+    padding: 12px 20px; /* Espaciado interno mejorado */
     text-align: center;
-    padding: 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px; /* Aumentar el tamaño de fuente */
+    margin: 6px 0; /* Espaciado entre botones */
+    cursor: pointer;
+    border-radius: 5px; /* Bordes más redondeados */
+    transition: background-color 0.3s, transform 0.2s; /* Efecto de transición */
 }
 
-/* Estilo para botones de mesa */
-.mesas {
-    margin-top: 20px;
+.button:hover, .register-button:hover {
+    background-color: #555; /* Color de fondo al pasar el mouse */
+    transform: scale(1.05); /* Efecto de escala al pasar el mouse */
 }
 
-.botones-mesas button {
-    background-color: #795548; /* Color de los botones de mesa */
-    padding: 12px; /* Mayor padding */
-    margin: 6px; /* Espaciado */
-    color: #FFF;
-    border-radius: 5px; /* Bordes redondeados */
-}
-
-/* Botones funcionales */
-.botones-funcionales button {
-    background-color: #FF7043; /* Color de botones funcionales */
-    color: #FFF;
-    padding: 12px; /* Mayor padding */
-    margin: 12px; /* Espaciado */
-    border-radius: 5px;
-}
-
-/* Estilo de categorías */
-.categorias button {
-    background-color: #D84315; /* Color de categorías */
-    color: #FFF;
-    margin: 6px;
-    padding: 12px; /* Mayor padding */
-    border-radius: 5px;
-}
-
-/* Contenedores de información */
-.factura, .propinas, .ventas-diarias, .inventario {
-    width: 90%;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #FFFFFF;
-    border: 2px solid #D84315; /* Borde más visible */
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
-}
-
-/* Estilo de tablas */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-}
-
-table, th, td {
-    border: 1px solid #D84315; /* Borde de las celdas */
-    padding: 10px;
-    text-align: left;
-}
-
-/* Encabezado de tabla */
-thead {
-    background-color: #FF7043; /* Color de fondo del encabezado */
-    color: white;
-}
-
-/* Pie de tabla */
-tfoot td {
-    font-weight: bold;
-    background-color: #FF7043; /* Color de fondo del pie */
-    color: white;
-}
-
-/* Estilo para botones funcionales agrupados */
-.botones-funcionales {
-    margin-top: 20px;
-}
-
-/* Estilo para el foco en botones */
-button:focus {
+/* Estilo de foco en botones */
+.button:focus, .register-button:focus {
     outline: none; /* Eliminar contorno por defecto */
 }
 
 /* Agregar animación de enfoque a los botones */
-button:focus-visible {
-    box-shadow: 0 0 5px rgba(255, 112, 67, 0.5); /* Resaltar botón enfocado */
+.button:focus-visible, .register-button:focus-visible {
+    box-shadow: 0 0 5px rgba(51, 51, 51, 0.5); /* Resaltar botón enfocado */
 }
 
-
-
-.platos-domicilios {
-    text-align: center;
-    padding: 20px;
-}
-
-.categorias {
-    margin-bottom: 20px;
-}
-
-.categorias button {
-    margin: 5px;
-    padding: 15px;
-    font-size: 18px;
-    background-color: #D84315;
-    color: #FFF;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-}
-
-.categorias button:hover {
-    background-color: #F4511E;
-    transform: scale(1.05);
-}
-
-.platos-lista {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.plato-item {
-    border: 1px solid #D84315;
-    padding: 15px;
-    border-radius: 8px;
-    width: 220px;
-    text-align: center;
-    background-color: #f9f9f9;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
-}
-
-.plato-item:hover {
-    transform: scale(1.05);
-}
-
-.plato-item p {
-    font-size: 20px;
-    margin-bottom: 15px;
-    color: #4E342E;
-}
-
-.plato-item button {
-    padding: 12px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    transition: background-color 0.3s, transform 0.2s;
-}
-
-.plato-item button:hover {
-    background-color: #45a049;
-    transform: scale(1.05);
-}
-
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-}
-
-h2 {
-    color: #4E342E;
-    margin-bottom: 20px;
-}
-
-.chart-container {
-    width: 80%;
-    max-width: 800px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-}
