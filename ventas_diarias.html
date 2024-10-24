@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ventas Diarias</title>
+</head>
+<body>
+    <!-- Sección de Ventas Diarias -->
+    <div class="ventas-diarias">
+        <h2>Ventas Diarias</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Plato</th>
+                    <th>Cantidad</th>
+                    <th>Precio Unitario</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody id="ventas-diarias-detalles">
+                <!-- Aquí se insertarán los detalles de las ventas diarias -->
+            </tbody>
+        </table>
+
+        <!-- Botón para regresar al Menú Principal -->
+        <button onclick="window.location.href='menu-principal.html'" class="Button">Menú Principal</button>
+
+        <!-- Botón para limpiar las ventas del día -->
+        <button onclick="limpiarVentasDiarias()" class="Button">Limpiar Ventas del Día</button>
+    </div>
+
+    <script src="script_pagar.js"></script>
+</body>
+</html>

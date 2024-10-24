@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Inventario</title>
+</head>
+<body>
+    <div class="inventario">
+        <h2>Inventario</h2>
+        
+        <div class="formulario-producto">
+            <label for="nombre-producto">Nombre del Producto:</label>
+            <input type="text" id="nombre-producto">
+            <br>
+            <label for="cantidad-producto">Cantidad:</label>
+            <input type="number" id="cantidad-producto">
+            <br>
+            <label for="medida-producto">Medida (gramos, kilos, litros, etc.):</label>
+            <input type="text" id="medida-producto">
+            <br>
+            <button onclick="agregarProducto()">Agregar Producto</button>
+            <button onclick="modificarProducto()">Modificar Producto</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Medida</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="inventario-detalles">
+                <!-- Aquí se insertarán los detalles del inventario -->
+            </tbody>
+        </table>
+
+        <button onclick="window.location.href='menu-principal.html'">Regresar al Menú Principal</button>
+    </div>
+    
+    <script src="script_inventario.js"></script>
+</body>
+</html>

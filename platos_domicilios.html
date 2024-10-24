@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Platos para Domicilios</title>
+</head>
+<body>
+    <div class="platos-domicilios">
+        <h2>Platos a Domicilio</h2>
+
+        <!-- Categorías de Platos -->
+        <div class="categorias">
+            <button onclick="mostrarCategoria('sopas')">Sopas</button>
+            <button onclick="mostrarCategoria('parrilla')">Parrilla</button>
+            <button onclick="mostrarCategoria('tipicos')">Típicos</button>
+            <button onclick="mostrarCategoria('desayunos')">Desayunos</button>
+            <button onclick="mostrarCategoria('pescados')">Pescados</button>
+            <button onclick="mostrarCategoria('bebidas')">Bebidas</button>
+        </div>
+
+        <!-- Lista de Platos -->
+        <div id="platos-lista" class="platos-lista">
+            <!-- Aquí se mostrarán la lista de platos disponibles -->
+        </div>
+
+        <!-- Botón para regresar a Domicilios -->
+        <button onclick="window.location.href='domicilios.html'" class="Button">Regresar a Domicilios</button>
+    </div>
+
+    <script src="script_domicilios.js"></script>
+</body>
+</html>

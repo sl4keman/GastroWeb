@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <script src="script_pagar.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Factura - Mesa</title>
+</head>
+<body>
+    <div class="factura">
+        <h2>Factura de Mesa <span id="mesa-numero"></span></h2>
+       
+        <table>
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Precio</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody id="factura-detalles">
+                <!-- Aquí se insertarán los detalles de la factura -->
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th colspan="3">Total</th>
+                    <td id="total">0</td>
+                </tr>
+            </tfoot>
+        </table>
+        <button onclick="pagarFactura()" class="Button">Pagar</button>
+        <button onclick="limpiarFactura()" class="Button">Limpiar Factura</button>
+        <button onclick="window.location.href='menu-platos.html'" class="Button">Menú de Platos</button>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Mostrar el número de la mesa seleccionada en el encabezado y cargar la factura
+        window.onload = function() {
+            const mesa = localStorage.getItem('mesaSeleccionada');
+            if (mesa) {
+                document.getElementById('mesa-numero').textContent = mesa;
+                cargarFactura(); // Llamar a la función cargarFactura para mostrar los platos
+            } else {
+                alert('No se ha seleccionado una mesa.');
+                window.location.href = 'menu-principal.html'; // Redirigir si no hay mesa seleccionada
+            }
+        }
+    </script>
+
+</body>
+</html>

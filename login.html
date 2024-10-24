@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Iniciar sesión</title>
+</head>
+<body>
+  
+    <div class="login-container">
+        <form class="login-form" action="/login" method="post">
+            <h2>Iniciar sesión</h2>
+            <label for="correo">Correo</label>
+            <input type="email" id="correo" name="correo" required>
+            <label for="contrasena">Contraseña</label>
+            <input type="password" id="contrasena" name="contrasena" required>
+            <button onclick="windows.location.href='menu-principal.html'" class="Button">Iniciar sesión </button>
+        <button onclick="window.location.href='registro.html'" class="register-button">Registrar nuevo usuario</button> 
+        <script src="script.js"></script>       
+</body>
+</html>
