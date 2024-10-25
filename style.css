@@ -83,3 +83,487 @@ input[type="email"], input[type="password"] {
     box-shadow: 0 0 5px rgba(51, 51, 51, 0.5); /* Resaltar botón enfocado */
 }
 
+.menu-principal {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.mesas {
+    display: inline-block;
+    border: 2px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.imagen-mesa {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    opacity: 0.5; /* Transparencia */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.botones-mesas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, auto);
+    gap: 10px;
+    position: relative;
+    z-index: 1;
+    margin-top: 10px;
+}
+
+.botones-mesas .button {
+    width: 100%;
+    padding: 10px;
+}
+
+.botones-funcionales {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.botones-funcionales .button {
+    padding: 10px 15px;
+}
+
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor principal del menú */
+.mesa-menu {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Título */
+.mesa-menu h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Categorías de botones */
+.categorias {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.categorias button {
+    padding: 10px;
+    background-color: #4CAF50; /* Verde o el color primario de tu diseño */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+.categorias button:hover {
+    background-color: #45a049; /* Color más oscuro al pasar el mouse */
+}
+
+/* Lista de platos */
+#lista-platos {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+#lista-platos li {
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Botones de acciones principales */
+.Button {
+    background-color: #d9534f; /* Rojo o un color de énfasis */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 5px;
+    width: calc(50% - 10px);
+}
+
+.Button:hover {
+    background-color: #c9302c; /* Color más oscuro al pasar el mouse */
+}
+
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Contenedor de la factura */
+.factura {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Título de la factura */
+.factura h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Estilo de la tabla de factura */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #4CAF50; /* Color de encabezado */
+    color: white;
+}
+
+td {
+    color: #333;
+}
+
+tfoot th {
+    text-align: right;
+}
+
+/* Estilo de botones */
+.Button {
+    background-color: #d9534f; /* Rojo de énfasis */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Button:hover {
+    background-color: #c9302c;
+}
+
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Contenedor del inventario */
+.inventario {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Título del inventario */
+.inventario h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Estilo del formulario */
+.formulario-producto label {
+    font-size: 14px;
+    margin-top: 10px;
+    display: block;
+    color: #555;
+}
+
+.formulario-producto input {
+    width: 90%;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* Estilo de la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+td {
+    color: #333;
+}
+
+/* Estilo de botones */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Botón de regreso con un color diferente */
+button[onclick*="menu-principal.html"] {
+    background-color: #6c757d;
+}
+
+button[onclick*="menu-principal.html"]:hover {
+    background-color: #5a6268;
+}
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Contenedor principal del menú */
+.menu-principal {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+}
+
+.menu-principal h1 {
+    color: #4E342E;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.mesas h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Botones de mesas */
+.botones-mesas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.botones-mesas .button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.botones-mesas .button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Botones funcionales */
+.botones-funcionales {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.botones-funcionales .button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.botones-funcionales .button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Botón de cerrar sesión */
+.button-logout {
+    background-color: #d9534f;
+    margin-top: 30px;
+    padding: 10px 25px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.button-logout:hover {
+    background-color: #c9302c;
+    transform: scale(1.05);
+}
+
+
+/*Domicilios*/
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor principal */
+.domicilios {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+h2 {
+    color: #3a7bd5;
+    margin-bottom: 20px;
+}
+
+/* Tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+thead {
+    background-color: #3a7bd5;
+    color: white;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+tfoot th {
+    text-align: right;
+    font-weight: bold;
+}
+
+tfoot td {
+    font-weight: bold;
+    color: #3a7bd5;
+}
+
+/* Botones */
+button {
+    background-color: #3a7bd5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #3065a3;
+}
+
+button:active {
+    background-color: #274b80;
+}
+
+

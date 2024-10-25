@@ -33,22 +33,21 @@
         <button onclick="pagarFactura()" class="Button">Pagar</button>
         <button onclick="limpiarFactura()" class="Button">Limpiar Factura</button>
         <button onclick="window.location.href='menu-platos.html'" class="Button">Menú de Platos</button>
+        <<button onclick="irAlMenuPrincipal()" class="Button">Menú Principal</button>
     </div>
 
     <script src="script.js"></script>
     <script>
-        // Mostrar el número de la mesa seleccionada en el encabezado y cargar la factura
         window.onload = function() {
             const mesa = localStorage.getItem('mesaSeleccionada');
             if (mesa) {
                 document.getElementById('mesa-numero').textContent = mesa;
-                cargarFactura(); // Llamar a la función cargarFactura para mostrar los platos
+                cargarFactura(); 
             } else {
                 alert('No se ha seleccionado una mesa.');
-                window.location.href = 'menu-principal.html'; // Redirigir si no hay mesa seleccionada
+                window.location.href = 'menu-principal.html';
             }
         }
     </script>
-
 </body>
 </html>
