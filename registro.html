@@ -9,6 +9,7 @@
 <body>
  
     <div class="register-container">
+        <img src="logo.png" alt="Logo del restaurante" class="login-logo">
         <form class="register-form" id="registerForm">
             <h2>Crear nueva cuenta</h2>
             <label for="nombre">Nombre</label>
@@ -19,12 +20,10 @@
             <input type="password" id="contrasena" name="contrasena" required>
             <label for="fecha_nacimiento">Fecha de nacimiento</label>
             <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
-            <button type="submit" class="Button">Registrar</button> <!-- Removido el onclick -->
-            <button onclick="window.location.href='login.html'" class="Button">Iniciar Sesión</button>
+            <button type="submit" class="button">Registrar</button>
+            <button type="button" onclick="window.location.href='login.html'" class="button">Iniciar Sesión</button>
         </form>
     </div>
     <script src="script.js"></script>
 </body>
 </html>
-
-

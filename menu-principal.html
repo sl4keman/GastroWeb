@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <script src="script.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Menú Principal - El Ranchón</title>
+    <script src="script.js"></script>
 </head>
 <body>
-    
     <div class="menu-principal">
+        <!-- Logo en la parte superior -->
+        <img src="logo.png" alt="Logo del restaurante El Ranchón" class="logo">
+        
         <h1>El Ranchón</h1>
+        <h1>Seleccione una Mesa</h1>
         <div class="mesas">
-            <h2>Selecciona una Mesa</h2>
+            
             <div class="botones-mesas">
                 <button onclick="seleccionarMesa(1)" class="button">Mesa 1</button>
                 <button onclick="seleccionarMesa(2)" class="button">Mesa 2</button>
@@ -27,12 +30,14 @@
                 <button onclick="seleccionarMesa('Llevar')" class="button">Llevar</button>
             </div>
         </div>
+        
         <div class="botones-funcionales">
             <button onclick="window.location.href='ventas_diarias.html'" class="button">Ventas del día</button>
             <button onclick="window.location.href='inventario.html'" class="button">Inventario</button>
             <button onclick="window.location.href='estadisticas.html'" class="button">Estadísticas</button>
             <button onclick="window.location.href='domicilios.html'" class="button">Domicilios</button>
         </div>
+        
         <button onclick="window.location.href='login.html'" class="button button-logout">Cerrar sesión</button>
     </div>
 </body>

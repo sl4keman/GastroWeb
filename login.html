@@ -4,19 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Iniciar sesión</title>
+    <title>Iniciar sesión - El Ranchón</title>
+    
 </head>
 <body>
-  
     <div class="login-container">
         <form class="login-form" action="/login" method="post">
-            <h2>Iniciar Sesión</h2>
+            <!-- Logo del restaurante -->
+            <img src="logo.png" alt="Logo del restaurante" class="login-logo">
+            <h2>Iniciar Sesión en El Ranchón</h2>
             <label for="correo">Correo</label>
             <input type="email" id="correo" name="correo" required>
             <label for="contrasena">Contraseña</label>
             <input type="password" id="contrasena" name="contrasena" required>
-            <button onclick="windows.location.href='menu-principal.html'" class="Button">Iniciar sesión </button>
-        <button onclick="window.location.href='registro.html'" class="register-button">Registrar nuevo usuario</button> 
-        <script src="script.js"></script>       
+            <button type="submit" class="Button">Iniciar sesión</button>
+            <button type="button" onclick="window.location.href='registro.html'" class="register-button">Registrar nuevo usuario</button> 
+        </form>
+    </div>
+  
+    <script src="script.js"></script>
 </body>
 </html>
