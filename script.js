@@ -13,11 +13,20 @@ function login() {
         return;
     }
 
+    // Obtener usuarios registrados del localStorage
+    const usuariosRegistrados = JSON.parse(localStorage.getItem('usuariosRegistrados')) || [];
+    const usuario = usuariosRegistrados.find(user => user.email === email && user.password === password);
+
+    if (!usuario) {
+        alert("El usuario no está registrado o la contraseña es incorrecta.");
+        return;
+    }
+
     console.log(`Iniciando sesión con email: ${email}`);
     window.location.href = 'menu-principal.html';
 }
 
-document.querySelector('.login-form button').addEventListener('click', (e) => {
+document.querySelector('.login-form button')?.addEventListener('click', (e) => {
     e.preventDefault();
     login();
 });
@@ -28,23 +37,34 @@ function register() {
     const password = document.getElementById('contrasena').value;
     const fechaNacimiento = document.getElementById('fecha_nacimiento').value;
 
-    // Validación básica para asegurarse de que todos los campos estén completos
     if (!nombre || !email || !password || !fechaNacimiento) {
         alert("Por favor, complete todos los campos antes de registrar.");
         return; // Detener el registro si hay campos vacíos
     }
 
+    // Obtener usuarios registrados y agregar el nuevo
+    const usuariosRegistrados = JSON.parse(localStorage.getItem('usuariosRegistrados')) || [];
+    const usuarioExistente = usuariosRegistrados.find(user => user.email === email);
+
+    if (usuarioExistente) {
+        alert("Este correo ya está registrado. Por favor, use otro.");
+        return;
+    }
+
+    usuariosRegistrados.push({ nombre, email, password, fechaNacimiento });
+    localStorage.setItem('usuariosRegistrados', JSON.stringify(usuariosRegistrados));
+
     console.log(`Registrando usuario: ${nombre}, email: ${email}`);
+    alert("Registro exitoso. Ahora puede iniciar sesión.");
     window.location.href = 'login.html'; // Redirigir al login después de registrar
 }
 
-// Asociar el evento de 'submit' al formulario para prevenir el comportamiento por defecto
-document.getElementById('registerForm').addEventListener('submit', (e) => {
+document.getElementById('registerForm')?.addEventListener('submit', (e) => {
     e.preventDefault(); // Prevenir el envío predeterminado del formulario
     register(); // Llamar a la función de registro
 });
 
-document.querySelector('.register-form button').addEventListener('click', (e) => {
+document.querySelector('.register-form button')?.addEventListener('click', (e) => {
     e.preventDefault();
     register();
 });
@@ -58,7 +78,6 @@ function seleccionarMesa(mesa) {
     // Redirigir al menú de platos
     window.location.href = 'menu-platos.html'; 
 }
-
 
 // Función para mostrar platos según la categoría seleccionada
 function mostrarCategoria(categoria) {
@@ -81,7 +100,8 @@ function mostrarCategoria(categoria) {
         platos = [
             { nombre: 'Carne a la Llanera', precio: 25000 },
             { nombre: 'Carne Mixta', precio: 28000 },
-            { nombre: 'Corte de Falda', precio: 27000 }
+            { nombre: 'Corte de Falda', precio: 27000 },
+            { nombre: 'Palo de costilla', precio: 50000 }
         ];
     } else if (categoria === 'desayunos') {
         platos = [
@@ -179,3 +199,4 @@ function cargarFactura() {
 function irAlMenuPrincipal() {
     window.location.href = 'menu-principal.html';
 }
+
