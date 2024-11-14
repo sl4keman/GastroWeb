@@ -4,12 +4,22 @@ if (!window.platosSeleccionados) {
 }
 console.log('Platos seleccionados cargados desde localStorage:', platosSeleccionados);
 
+// Validación de correo electrónico
+function esCorreoValido(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email); // Expresión regular para verificar si el email contiene "@"
+}
+
 function login() {
     const email = document.getElementById('correo').value;
     const password = document.getElementById('contrasena').value;
 
     if (!email || !password) {
         alert("Por favor, ingrese tanto el correo como la contraseña.");
+        return;
+    }
+
+    if (!esCorreoValido(email)) {
+        alert("Por favor, ingrese un correo válido.");
         return;
     }
 
@@ -26,7 +36,7 @@ function login() {
     window.location.href = 'menu-principal.html';
 }
 
-document.querySelector('.login-form button')?.addEventListener('click', (e) => {
+document.getElementById('loginButton')?.addEventListener('click', (e) => {
     e.preventDefault();
     login();
 });
@@ -40,6 +50,11 @@ function register() {
     if (!nombre || !email || !password || !fechaNacimiento) {
         alert("Por favor, complete todos los campos antes de registrar.");
         return; // Detener el registro si hay campos vacíos
+    }
+
+    if (!esCorreoValido(email)) {
+        alert("Por favor, ingrese un correo válido.");
+        return;
     }
 
     // Obtener usuarios registrados y agregar el nuevo
@@ -199,4 +214,3 @@ function cargarFactura() {
 function irAlMenuPrincipal() {
     window.location.href = 'menu-principal.html';
 }
-

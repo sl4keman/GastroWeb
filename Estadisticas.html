@@ -1,1 +1,37 @@
-
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estadísticas de Ventas</title>
+    <!-- Importar la biblioteca Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Importar el script de estadísticas -->
+    <script src="ventas_estadisitcas.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+        h1 {
+            margin-top: 20px;
+        }
+        #ventasDiariasChart {
+            max-width: 600px;
+            max-height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Estadísticas de Ventas Diarias</h1>
+    <canvas id="ventasDiariasChart" width="600" height="400"></canvas>
+    <!-- Botón para regresar al Menú Principal -->
+    <button onclick="window.location.href='menu-principal.html'" class="Button short-button">Menú Principal</button>
+</body>
+</html>
