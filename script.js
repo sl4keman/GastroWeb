@@ -71,7 +71,7 @@ function register() {
 
     console.log(`Registrando usuario: ${nombre}, email: ${email}`);
     alert("Registro exitoso. Ahora puede iniciar sesión.");
-    window.location.href = 'login.html'; // Redirigir al login después de registrar
+    window.location.href = 'index.html'; // Redirigir al login después de registrar
 }
 
 document.getElementById('registerForm')?.addEventListener('submit', (e) => {
